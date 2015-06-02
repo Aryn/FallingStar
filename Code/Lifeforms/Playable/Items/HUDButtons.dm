@@ -17,29 +17,24 @@
 	if(mob.client)
 		mob.client.screen -= src
 
-var/button/drop/BUTTON_DROP = new
 /button/drop/icon_state = "act_drop"
-/button/drop/screen_loc = "7:5,1:5"
+/button/drop/screen_loc = "14:27,2:5"
 /button/drop/Pressed(mob/user)
 	user.active_slot.Drop(user.loc)
 
-var/button/swap/left/BUTTON_SWAP_L = new
-var/button/swap/right/BUTTON_SWAP_R = new
 /button/swap/left/icon_state = "hand1"
-/button/swap/left/screen_loc = "5:5,2:5"
+/button/swap/left/screen_loc = "7:13,2:5"
 /button/swap/right/icon_state = "hand2"
-/button/swap/right/screen_loc = "6:5,2:5"
+/button/swap/right/screen_loc = "8:13,2:5"
 /button/swap/name = "swap"
 /button/swap/Pressed(mob/user)
 	user.ChangeActiveSlot()
 
-var/button/equip/BUTTON_EQUIP = new
 /button/equip/icon_state = "act_equip"
-/button/equip/screen_loc = "5:5,2:5"
+/button/equip/screen_loc = "7:13,2:5"
 /button/equip/Pressed(mob/user)
 	user << "\red<b>This button is not currently functional and is only present for aesthetic reasons."
 
-var/button/expand_slots/BUTTON_EXPAND_SLOTS = new
 /button/expand_slots/icon_state = "other"
 /button/expand_slots/screen_loc = "1:5,1:5"
 /button/expand_slots/Pressed(mob/user)
@@ -47,3 +42,29 @@ var/button/expand_slots/BUTTON_EXPAND_SLOTS = new
 		if(slot.slot_type.fixed) continue
 		if(slot.shown) slot.Hide()
 		else slot.Show()
+
+/button/target_selector/icon_state = "zone_sel"
+/button/target_selector/screen_loc = "14:27,1:5"
+
+/button/intent/icon = 'Icons/HUD/Intent.dmi'
+/button/intent/var/button/intent/alternate
+
+/button/intent/peace/icon_state = "peace"
+/button/intent/peace/screen_loc = "13:27,1:5"
+/button/intent/peace/New()
+	. = ..()
+	alternate = new/button/intent/war
+	alternate.alternate = src
+
+/button/intent/peace/Pressed(mob/user)
+	Hide(user)
+	alternate.Show(user)
+	user.client.mouse_pointer_icon = 'Icons/HUD/CombatPointer.dmi'
+
+/button/intent/war/icon_state = "war"
+/button/intent/war/screen_loc = "13:27,1:5"
+
+/button/intent/war/Pressed(mob/user)
+	Hide(user)
+	alternate.Show(user)
+	user.client.mouse_pointer_icon = null

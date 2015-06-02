@@ -8,7 +8,21 @@ var/list/ITEM_SLOTS_HUMAN = newlist(
 	/button/slot_type/shoes,
 	/button/slot_type/gloves,
 	/button/slot_type/pocket/suit_pocket,
-	/button/slot_type/id
+	/button/slot_type/id,
+	/button/slot_type/belt,
+	/button/slot_type/back,
+	/button/slot_type/pocket/left_pocket,
+	/button/slot_type/pocket/right_pocket
+	)
+
+var/list/BUTTONS_HUMAN = newlist(
+	/button/drop,
+	/button/swap/left,
+	/button/swap/right,
+	/button/equip,
+	/button/expand_slots,
+	/button/target_selector,
+	/button/intent/peace,
 	)
 
 /*
@@ -24,16 +38,16 @@ var/obj/system/active_hand_icon/right/RIGHT_HAND_ACTIVE = new
 /obj/system/active_hand_icon/blend_mode = BLEND_ADD
 
 /obj/system/active_hand_icon/left/icon_state = "left_hand_active"
-/obj/system/active_hand_icon/left/screen_loc = "6:5,1:5"
+/obj/system/active_hand_icon/left/screen_loc = "8:13,1:5"
 /obj/system/active_hand_icon/right/icon_state = "right_hand_active"
-/obj/system/active_hand_icon/right/screen_loc = "5:5,1:5"
+/obj/system/active_hand_icon/right/screen_loc = "7:13,1:5"
 
 
 /button/slot_type/hand/Accepts(obj/item/item)
 	return istype(item)
 
 /button/slot_type/hand/left/equip_state = "left_hand"
-/button/slot_type/hand/left/screen_loc = "6:5,1:5"
+/button/slot_type/hand/left/screen_loc = "8:13,1:5"
 
 /button/slot_type/hand/left/Activate(mob/owner)
 	if(owner.client)
@@ -44,7 +58,7 @@ var/obj/system/active_hand_icon/right/RIGHT_HAND_ACTIVE = new
 		owner.client.screen -= LEFT_HAND_ACTIVE
 
 /button/slot_type/hand/right/equip_state = "right_hand"
-/button/slot_type/hand/right/screen_loc = "5:5,1:5"
+/button/slot_type/hand/right/screen_loc = "7:13,1:5"
 
 /button/slot_type/hand/right/Activate(mob/owner)
 	if(owner.client)
@@ -78,6 +92,7 @@ var/obj/system/active_hand_icon/right/RIGHT_HAND_ACTIVE = new
 /button/slot_type/gloves/screen_loc = "3:9,2:7"
 /button/slot_type/gloves/fixed = 0
 
+/button/slot_type/pocket/equip_state = "pocket"
 /button/slot_type/pocket/shows_equipment = 0
 /button/slot_type/pocket/Accepts(item/item)
 	return 1
@@ -88,3 +103,12 @@ var/obj/system/active_hand_icon/right/RIGHT_HAND_ACTIVE = new
 
 /button/slot_type/id/equip_state = "id"
 /button/slot_type/id/screen_loc = "4:11,1:5"
+
+/button/slot_type/belt/equip_state = "belt"
+/button/slot_type/belt/screen_loc = "5:11,1:5"
+
+/button/slot_type/back/equip_state = "back"
+/button/slot_type/back/screen_loc = "6:11,1:5"
+
+/button/slot_type/pocket/left_pocket/screen_loc = "9:13,1:5"
+/button/slot_type/pocket/right_pocket/screen_loc = "10:13,1:5"
