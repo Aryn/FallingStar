@@ -1,0 +1,37 @@
+"a" = (/space,/area)
+"b" = (/tile/station/floor,/tile/station/wall,/space,/area)
+"c" = (/tile/station/floor,/space,/area)
+"d" = (/tile/station/floor,/obj/station/surface/table,/space,/area)
+"e" = (/tile/station/floor,/obj/station/door/airlock,/space,/area)
+"f" = (/tile/station/floor,/obj/station/surface/table,/obj/item/test,/space,/area)
+"g" = (/tile/station/floor,/obj/station/structural/window,/space,/area)
+"h" = (/tile/station/floor,/obj/station/structural/grille,/obj/station/structural/window,/obj/station/structural/window{tag = "icon-default (NORTH)"; icon_state = ""; dir = 1},/obj/station/structural/window{tag = "icon-default (EAST)"; icon_state = ""; dir = 4},/space,/area)
+"i" = (/tile/station/floor,/obj/station/structural/grille,/obj/station/structural/window,/obj/station/structural/window{tag = "icon-default (WEST)"; icon_state = ""; dir = 8},/obj/station/structural/window{tag = "icon-default (NORTH)"; icon_state = ""; dir = 1},/space,/area)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aabbbbbbbbbbbbbbbbbbbbbaa
+aabcccccccccbcccccccccbaa
+aabcdddddcccbccdddddccbaa
+aabcdddddcccecccccccccbaa
+aabcdddddcccbcccccccccbaa
+aabcccccccccbccdddddccbaa
+aabbbbbbbbbbbcccccccccbaa
+aabddddddddcbcccccccccbaa
+aabdccccccccbccdddddccbaa
+aabdccccccccecccccccccbaa
+aabdccccccccecccccccccbaa
+aabfcccccccceccdddddccbaa
+aabdccccccccbcccccccccbaa
+aabccgccccccbcccccccccbaa
+aabcccccccccbebbbbbbbebaa
+aabcccccccccbccddbddccbaa
+aabcccbbbebbbcccdbdcccbaa
+aabheibdcccdbcccdbdcccbaa
+aabcccbdcccdbcccdbdcccbaa
+aabcccbdddddbccddbddccbaa
+aabbebbbbbbbbbbbbbbbbbbaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+"}

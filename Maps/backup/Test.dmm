@@ -1,0 +1,34 @@
+"a" = (/space,/area)
+"b" = (/tile/station/floor,/tile/station/wall,/space,/area)
+"c" = (/tile/station/floor,/space,/area)
+"d" = (/tile/station/floor,/obj/station/surface/table,/space,/area)
+"e" = (/tile/station/floor,/obj/station/door/airlock,/space,/area)
+"f" = (/tile/station/floor,/obj/station/structure/grille,/space,/area)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aabbbbbbbbbbbbbbbbbbbbbaa
+aabcccccccccbcccccccccbaa
+aabcdddddcccbccdddddccbaa
+aabcdddddcccecccccccccbaa
+aabcdddddcccbcccccccccbaa
+aabcccccccccbccdddddccbaa
+aabbbbbbbbbbbcccccccccbaa
+aabddddddddcbcccccccccbaa
+aabdccccccccbccdddddccbaa
+aabdccccccccecccccccccbaa
+aabdccccccccecccccccccbaa
+aabdcccccccceccdddddccbaa
+aabdccccccccbcccccccccbaa
+aabcccccccccbcccccccccbaa
+aabcccccccccbebbbbbbbebaa
+aabcccccccccbccddbddccbaa
+aabcccbbbebbbcccdbdcccbaa
+aabfefbdcccdbcccdbdcccbaa
+aabcccbdcccdbcccdbdcccbaa
+aabcccbdddddbccddbddccbaa
+aabbebbbbbbbbbbbbbbbbbbaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+"}
