@@ -1,4 +1,4 @@
-/mob/humanoid/human/icon = 'Icons/Lifeforms/Playable/Human/Test.dmi'
+/mob/humanoid/human/icon = 'Icons/Lifeforms/Playable/Human/Human.dmi'
 /mob/humanoid/human/icon_state = "female_arab"
 
 /mob/humanoid/var/item_slot/left_hand
@@ -21,6 +21,14 @@
 	for(var/button/button in BUTTONS_HUMAN)
 		button.Show(src)
 	left_hand.Activate()
+
+	var/obj/item/uniform/grey/uniform = new(src)
+	var/obj/item/shoes/black/shoes = new(src)
+	var/item_slot/slot = ItemSlot("clothes")
+	slot.ForceEquip(uniform)
+	slot = ItemSlot("shoes")
+	slot.ForceEquip(shoes)
+	overlays += image('Icons/Lifeforms/Playable/Human/Hair.dmi', icon_state = "hair_longest_s", layer = 6)
 
 /mob/humanoid/human/ItemSlot(slot_name)
 	for(var/item_slot/slot in item_slots)

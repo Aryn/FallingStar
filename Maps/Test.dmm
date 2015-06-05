@@ -1,37 +1,49 @@
 "a" = (/space,/area)
-"b" = (/tile/station/floor,/tile/station/wall,/space,/area)
-"c" = (/tile/station/floor,/space,/area)
-"d" = (/tile/station/floor,/obj/station/surface/table,/space,/area)
-"e" = (/tile/station/floor,/obj/station/door/airlock,/space,/area)
-"f" = (/tile/station/floor,/obj/station/surface/table,/obj/item/test,/space,/area)
-"g" = (/tile/station/floor,/obj/station/structural/window,/space,/area)
-"h" = (/tile/station/floor,/obj/station/structural/grille,/obj/station/structural/window,/obj/station/structural/window{tag = "icon-default (NORTH)"; icon_state = ""; dir = 1},/obj/station/structural/window{tag = "icon-default (EAST)"; icon_state = ""; dir = 4},/space,/area)
-"i" = (/tile/station/floor,/obj/station/structural/grille,/obj/station/structural/window,/obj/station/structural/window{tag = "icon-default (WEST)"; icon_state = ""; dir = 8},/obj/station/structural/window{tag = "icon-default (NORTH)"; icon_state = ""; dir = 1},/space,/area)
+"b" = (/turf/wall,/area)
+"c" = (/turf/floor,/area)
+"d" = (/obj/station/structural/grille,/obj/station/structural/window,/obj/station/structural/window{tag = "icon-default (NORTH)"; icon_state = ""; dir = 1},/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
+"e" = (/obj/station/structural/grille,/obj/station/structural/window,/obj/station/structural/window{tag = "icon-default (NORTH)"; icon_state = ""; dir = 1},/obj/station/structural/window{tag = "icon-default (EAST)"; icon_state = ""; dir = 4},/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
+"f" = (/obj/station/door/airlock,/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
+"g" = (/obj/station/door/airlock,/turf/floor,/area)
+"h" = (/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
+"i" = (/turf/floor{tag = "icon-whitegreenfull"; icon_state = "whitegreenfull"},/area)
+"j" = (/obj/station/surface/table,/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
+"k" = (/obj/station/surface/table,/turf/floor{tag = "icon-whitegreenfull"; icon_state = "whitegreenfull"},/area)
+"l" = (/obj/station/structural/grille,/obj/station/structural/window{tag = "icon-default (NORTH)"; icon_state = ""; dir = 1},/obj/station/structural/window,/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
+"m" = (/obj/station/structural/grille,/obj/station/structural/window{tag = "icon-default (NORTH)"; icon_state = ""; dir = 1},/obj/station/structural/window,/obj/station/structural/window{tag = "icon-default (EAST)"; icon_state = ""; dir = 4},/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
+"n" = (/turf/floor{tag = "icon-white"; icon_state = "white"},/area)
+"o" = (/obj/station/surface/table,/turf/floor,/area)
+"p" = (/obj/station/surface/table,/turf/floor{tag = "icon-white"; icon_state = "white"},/area)
+"q" = (/obj/station/structural/logo/big,/turf/floor,/area)
+"r" = (/obj/station/structural/grille,/obj/station/structural/window{tag = "icon-default (NORTH)"; icon_state = ""; dir = 1},/obj/station/structural/window{tag = "icon-default (EAST)"; icon_state = ""; dir = 4},/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
+"s" = (/obj/station/structural/grille,/obj/station/structural/window{tag = "icon-default (EAST)"; icon_state = ""; dir = 4},/obj/station/structural/window{tag = "icon-default (WEST)"; icon_state = ""; dir = 8},/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
+"t" = (/turf/floor{tag = "icon-yellowfull"; icon_state = "yellowfull"},/area)
+"u" = (/obj/station/structural/grille,/obj/station/structural/window,/obj/station/structural/window{tag = "icon-default (EAST)"; icon_state = ""; dir = 4},/obj/station/structural/window{tag = "icon-default (WEST)"; icon_state = ""; dir = 8},/turf/floor{tag = "icon-plating"; icon_state = "plating"},/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaa
-aabbbbbbbbbbbbbbbbbbbbbaa
-aabcccccccccbcccccccccbaa
-aabcdddddcccbccdddddccbaa
-aabcdddddcccecccccccccbaa
-aabcdddddcccbcccccccccbaa
-aabcccccccccbccdddddccbaa
-aabbbbbbbbbbbcccccccccbaa
-aabddddddddcbcccccccccbaa
-aabdccccccccbccdddddccbaa
-aabdccccccccecccccccccbaa
-aabdccccccccecccccccccbaa
-aabfcccccccceccdddddccbaa
-aabdccccccccbcccccccccbaa
-aabccgccccccbcccccccccbaa
-aabcccccccccbebbbbbbbebaa
-aabcccccccccbccddbddccbaa
-aabcccbbbebbbcccdbdcccbaa
-aabheibdcccdbcccdbdcccbaa
-aabcccbdcccdbcccdbdcccbaa
-aabcccbdddddbccddbddccbaa
-aabbebbbbbbbbbbbbbbbbbbaa
+aabbbbbbbbbbbbbbbbbbbbaaa
+aabccccccccccccccccccbaaa
+aabccccccccccccccccccbaaa
+aabdddefbbbbbbgbbbbccbaaa
+aabhhhhhbiiiiiiiiibccbaaa
+aabhjjhhbikikikikibccbaaa
+aabhjjhhbikikikikibccbaaa
+aabhhhhhbiiiiiiiiibccbaaa
+aablllmfbbbbbbbbbbbccbaaa
+aabcccccccbnnnnnnnbccbaaa
+aaboccccccbnpnnnnnbccbaaa
+aaboccccccbnppppnnbccbaaa
+aaboccccccbnnnnnnnbccbaaa
+aabocqccccbbbbgbbbbccbaaa
+aabocccccccccccccccccbaaa
+aabccccccccccccccccccbaaa
+aabrgbbbbbbbgbbbbbbbbbaaa
+aaascbtttttttttttttttbaaa
+aaascbtttttttttttttttbaaa
+aaaugbtttttttttttttttbaaa
+aaaaabbbbbbbbbbbbbbbbbaaa
 aaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaa
 "}

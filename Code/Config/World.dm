@@ -4,3 +4,5 @@ world/turf = /space
 world/mob = /mob/humanoid/human
 
 world/view = 7
+
+client/mouse_pointer_icon = 'Cursor.dmi'

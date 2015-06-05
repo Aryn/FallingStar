@@ -6,7 +6,8 @@ mob/var/item_slot/active_slot
 /button/slot_type/var/shows_equipment = 1
 /button/slot_type/layer = FLY_LAYER
 
-/button/slot_type/proc/Accepts(item/item)
+/button/slot_type/proc/Accepts(obj/item/item, mob/user)
+	return item.equip_slot_type == name
 /button/slot_type/proc/Deactivate(mob/owner)
 /button/slot_type/proc/Activate(mob/owner)
 /button/slot_type/New()
@@ -63,7 +64,7 @@ mob/var/item_slot/active_slot
 	slot_type.Activate(owner)
 
 /item_slot/proc/TryEquip(obj/item/item)
-	if(slot_type.Accepts(item))
+	if(slot_type.Accepts(item,owner))
 		ForceEquip(item)
 		return 1
 	else
@@ -103,7 +104,7 @@ mob/var/item_slot/active_slot
 
 /item_slot/proc/OverlayEquipment()
 	if(!item || !slot_type.shows_equipment) return
-	if(!item_equip_overlay) item_equip_overlay = image(layer = FLY_LAYER)
+	if(!item_equip_overlay) item_equip_overlay = image(layer = 5)
 	item_equip_overlay.icon = item.icon
 	item_equip_overlay.icon_state = slot_type.equip_state
 	owner.overlays += item_equip_overlay

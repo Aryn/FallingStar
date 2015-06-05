@@ -42,9 +42,8 @@ var/obj/system/active_hand_icon/right/RIGHT_HAND_ACTIVE = new
 /obj/system/active_hand_icon/right/icon_state = "right_hand_active"
 /obj/system/active_hand_icon/right/screen_loc = "7:13,1:5"
 
-
 /button/slot_type/hand/Accepts(obj/item/item)
-	return istype(item)
+	return 1
 
 /button/slot_type/hand/left/equip_state = "left_hand"
 /button/slot_type/hand/left/screen_loc = "8:13,1:5"
@@ -94,12 +93,15 @@ var/obj/system/active_hand_icon/right/RIGHT_HAND_ACTIVE = new
 
 /button/slot_type/pocket/equip_state = "pocket"
 /button/slot_type/pocket/shows_equipment = 0
-/button/slot_type/pocket/Accepts(item/item)
-	return 1
+/button/slot_type/pocket/var/required_clothes = "clothes"
+/button/slot_type/pocket/Accepts(obj/item/item, mob/user)
+	var/item_slot/slot = user.ItemSlot(required_clothes)
+	return slot.item
 
 /button/slot_type/pocket/suit_pocket/equip_state = "suit_pocket"
 /button/slot_type/pocket/suit_pocket/screen_loc = "3:9,1:5"
 /button/slot_type/pocket/suit_pocket/fixed = 0
+/button/slot_type/pocket/suit_pocket/required_clothes = "suit"
 
 /button/slot_type/id/equip_state = "id"
 /button/slot_type/id/screen_loc = "4:11,1:5"
