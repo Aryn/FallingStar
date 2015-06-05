@@ -9,6 +9,8 @@
 #define FILE_DIR .
 #define FILE_DIR "Icons"
 #define FILE_DIR "Icons/Commands"
+#define FILE_DIR "Icons/Debug"
+#define FILE_DIR "Icons/Flavor"
 #define FILE_DIR "Icons/HUD"
 #define FILE_DIR "Icons/HUD/Organics"
 #define FILE_DIR "Icons/Lifeforms"
@@ -16,6 +18,10 @@
 #define FILE_DIR "Icons/Lifeforms/Playable/Human"
 #define FILE_DIR "Icons/Objects"
 #define FILE_DIR "Icons/Objects/Items"
+#define FILE_DIR "Icons/Objects/Items/Clothes"
+#define FILE_DIR "Icons/Objects/Items/Clothes/Shoes"
+#define FILE_DIR "Icons/Objects/Items/Clothes/Uniforms"
+#define FILE_DIR "Icons/Objects/Items/Legacy"
 #define FILE_DIR "Icons/Objects/Space"
 #define FILE_DIR "Icons/Objects/Station"
 #define FILE_DIR "Icons/Objects/Station/Doors"
@@ -31,6 +37,13 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
+#include "MapBuilding.dm"
+#include "Code\Atmos\System\AirController.dm"
+#include "Code\Atmos\System\Gases.dm"
+#include "Code\Atmos\System\GasType.dm"
+#include "Code\Atmos\System\Turf.dm"
+#include "Code\Atmos\System\Zone.dm"
+#include "Code\Atmos\Test\GasMixing.dm"
 #include "Code\Config\World.dm"
 #include "Code\Framework\Hooks.dm"
 #include "Code\Framework\Passability.dm"
@@ -41,6 +54,8 @@
 #include "Code\Lifeforms\Playable\Items\ItemSlot.dm"
 #include "Code\Lifeforms\Playable\Items\Slots\Human.dm"
 #include "Code\Objects\Object.dm"
+#include "Code\Objects\Items\Shoes.dm"
+#include "Code\Objects\Items\Uniforms.dm"
 #include "Code\Objects\Space\Space.dm"
 #include "Code\Objects\Station\Doors\Airlock.dm"
 #include "Code\Objects\Station\Doors\Door.dm"

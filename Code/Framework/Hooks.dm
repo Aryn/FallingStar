@@ -17,3 +17,5 @@ Any verb attached to a hook will get called at certain points in the game.
 world/New()
 	. = ..()
 	DoHook(/hook/map_loaded)
+	air_controller.Start()
+	DoHook(/hook/air_start)

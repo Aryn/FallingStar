@@ -33,7 +33,7 @@
 /button/equip/icon_state = "act_equip"
 /button/equip/screen_loc = "7:13,2:5"
 /button/equip/Pressed(mob/user)
-	user << "\red<b>This button is not currently functional and is only present for aesthetic reasons."
+
 
 /button/expand_slots/icon_state = "other"
 /button/expand_slots/screen_loc = "1:5,1:5"
@@ -59,7 +59,7 @@
 /button/intent/peace/Pressed(mob/user)
 	Hide(user)
 	alternate.Show(user)
-	user.client.mouse_pointer_icon = 'Icons/HUD/CombatPointer.dmi'
+	user.client.mouse_pointer_icon = 'Icons/HUD/Cursor-Combat.dmi'
 
 /button/intent/war/icon_state = "war"
 /button/intent/war/screen_loc = "13:27,1:5"
@@ -67,4 +67,4 @@
 /button/intent/war/Pressed(mob/user)
 	Hide(user)
 	alternate.Show(user)
-	user.client.mouse_pointer_icon = null
+	user.client.mouse_pointer_icon = 'Cursor.dmi'

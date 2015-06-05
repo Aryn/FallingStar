@@ -19,7 +19,7 @@ turf/proc/IsEnterable(direction, atom/movable/passer)
 		if((A.dir_airtight & direction) || (check_density && (A.dir_density & direction)))
 			if(!dense_dir || dense_dir.layer < A.layer) dense_dir = A
 
-	if(dense_dir)
+	if(dense_dir && direction != 0)
 		if(check_density) passer.Bump(dense_dir)
 		return 0
 	if(dense_full && passer.loc != src)
